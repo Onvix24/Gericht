@@ -2,3 +2,6 @@
 // import { isMobile } from "./functions.js";
 // import { formsModules } from "./forms/forms.js";
 
+window.addEventListener("load", (e) => {
+   document.body.insertAdjacentHTML("beforeend", `<div class="main-bg"></div>`);
+});

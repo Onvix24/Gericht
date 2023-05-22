@@ -7,11 +7,37 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="mainpage">
-				<div class="mainpage__slider main-slider">
-					<div class="main-slider__conteiner main-slider__conteiner_wide">
-						
+				<section data-fullscreen class="mainpage__slider main-slider">
+					<div class="main-slider__container main-slider__container_wide">
+						<div class="main-slider__container body-main-slider">
+								<div class="body-main-slider__swiper">
+									<div class="body-main-slider__slide slide-main-slider">
+										<div class="slide-main-slider__content">
+											<div class="slide-main-slider__header block-header block-header_big block-header_left">
+												<div class="block-header__sub-title">Chase the new Flavour</div>
+												<h2 class="block-header__title">The key to Fine dining</h2>
+											</div>	
+											<div class="slide-main-slider__text">
+												Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus</div>
+											<a href="" class="slide-main-slider__button button">Explore Menu</a>
+										</div>
+										 <div class="slide-main-slider__image">
+											<div class="slide-main-slider__image-ibg">
+												<img src="@img/mainpage/mainslider/01.jpg" alt="Img food">
+											</div>
+										 </div>
+										
+									</div>
+								</div>
+							<div class="body-main-slider__controll">Тут буллети</div>
+						</div>
+						<nav class="main-slider__menu menu-main-slider">
+							<a href="" class="menu-main-slider__link menu-main-slider__link_current">#Gericht</a>
+							<a href="" class="menu-main-slider__link">#Bar</a>
+						</nav>
+						<button type="button" class="main-slider__scroll scroll">Scroll</button>
 					</div>
-				</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

@@ -17,7 +17,10 @@ $fontSize: rem(16); // где 14(px) - размер шрифта по умолч
 
 // Основной цвет шрифта
 $mainColor: #aaa;
-$mainHover: #dcca87;
+$mainDark: #0c0b08; 
+$mainYellow: #dcca87;
+$mainDarkYellow: #ac9a5a;
+$mainWhite: #fff;
 
 
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
@@ -50,7 +53,7 @@ $mobileSmall: em(479.98); // Телефоны S
 
 body {
 	// Скролл заблокирован
-	background-color: #000;
+	background-color: $mainDark;
 	.lock & {
 		overflow: hidden;
 		touch-action: none;
@@ -67,6 +70,8 @@ body {
 	overflow: hidden;
 	// Прижимаем footer
 	> main {
+		position: relative;
+		z-index: 2;
 		flex: 1 1 auto;
 	}
 	// Фикс для слайдеров
@@ -94,6 +99,9 @@ body {
 		@if ($containerPadding>0) {
 			padding: 0 rem(math.div($containerPadding, 2));
 		}
+	}
+	[class*="__container_wide"] {
+		max-width: rem(1680);
 	}
 } @else {
 	// По брейк-поинтам
