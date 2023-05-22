@@ -86,40 +86,31 @@
 
    &__button {
    }
-
-   &__image {
-      align-self: center;
-      height: max-content;
-      padding: rem(24);
+ 
+   // .slide-main-slider__image-ibg
+   &__image-ibg {
+      margin-right: percent(25, 650);
       position: relative;
       &::before,
       &::after {
          content: "";
          position: absolute;
          background-color: $mainYellow;
-         width: percent(435, 620);
-         height: percent(435, 620);
+         width: percent(435, 619);
+         height: percent(435, 688);
       }
       &::before {
          top: 0;
          right: 0;
-         // transform: translate(25px, -25x);
+         transform: translate(25px, -25px);
       }
       &::after {
          bottom: 0;
          left: 0;
-         // transform: translate(-25px, 25x);
+         transform: translate(-25px, 25px);
       }
-   }
-   // .slide-main-slider__image-ibg
-   &__image-ibg {
-      z-index: 1;
-      // margin-right: percent(25, 650);
-      padding-top: percent(690, 620);
-      position: relative;
-
-      .img {
-         // z-index: 2;
+      img {
+         z-index: 2;
       }
    }
 }
