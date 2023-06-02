@@ -24,7 +24,6 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offset = 0) 
 		};
 		// Закрываем меню, если оно открыто
 		document.documentElement.classList.contains("menu-open") ? menuClose() : null;
-
 		if (typeof SmoothScroll !== 'undefined') {
 			// Прокрутка с использованием дополнения
 			new SmoothScroll().animateScroll(targetBlockElement, '', options);
@@ -41,3 +40,4 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offset = 0) 
 		FLS(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${targetBlock}`);
 	}
 };
+

@@ -2,10 +2,19 @@
 .header {
    color: #ffffff;
    padding: 10px 0;
-   position: fixed;
+   position: absolute;
    width: 100%;
    top: 0;
    z-index: 50;
+   &._header-scroll {
+      position: fixed;
+      transform: translate(0px, -100%);
+      background-color: rgba(0, 0, 0, 0.8);
+   }
+   &._header-show {
+      transition: transform 0.3s ease 0s;
+      transform: translate(0px, 0px);
+   }
    // .header__container
    &__container {
       // .header__container_wide
@@ -18,6 +27,9 @@
       @include adaptiveValue("min-height", 121, 50);
       @media (max-width: $mobile) {
          gap: 25px;
+      }
+      ._header-scroll & {
+         @include adaptiveValue("min-height", 80, 50);
       }
    }
    // .header__column
