@@ -95,9 +95,7 @@ function initSliders() {
                );
                controll.forEach((el, index) => {
                   let num;
-                  if (index < 10) {
-                     num = `0`;
-                  }
+                  if (index < 10) { num = `0`}
                   el.innerHTML = `${num}${index + 1}`;
                });
             },
