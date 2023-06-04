@@ -8,12 +8,12 @@
    z-index: 50;
    &._header-scroll {
       position: fixed;
-      transform: translate(0px, -100%);
-      background-color: rgba(0, 0, 0, 0.8);
+      top: -200%;
+      background-color: rgba(0, 0, 0, 0.6);
    }
    &._header-show {
-      transition: transform 0.3s ease 0s;
-      transform: translate(0px, 0px);
+      top: 0;
+      transition: top 0.3s ease 0s;
    }
    // .header__container
    &__container {
@@ -75,16 +75,16 @@
          height: 100%;
          top: 0;
          left: -100%;
-         background-color: #0c0c0c;
          transition: left 0.3s ease 0s;
+         background-color: #0c0c0c;
          @include adaptiveValue("padding-top", 170, 100);
          padding-bottom: rem(30);
          padding-right: rem(15);
          padding-left: rem(15);
          &::before {
             content: "";
+            top: -100%;
             position: fixed;
-            top: 0;
             width: 100%;
             left: 0;
             transition: top 0.3s ease 0s;
@@ -96,9 +96,9 @@
             @include adaptiveValue("height", 171, 100);
          }
          .menu-open & {
-            left: 0px;
+            left: 0;
             &::before {
-               top: 0px;
+               top: 0;
             }
          }
       }

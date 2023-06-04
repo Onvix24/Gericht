@@ -17,11 +17,10 @@ $fontSize: rem(16); // где 14(px) - размер шрифта по умолч
 
 // Основной цвет шрифта
 $mainColor: #aaa;
-$mainDark: #0c0b08; 
+$mainDark: #0c0b08;
 $mainYellow: #dcca87;
 $mainDarkYellow: #ac9a5a;
 $mainWhite: #fff;
-
 
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
 // Минимальная ширина страницы
@@ -43,7 +42,9 @@ $responsiveType: 1;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Брейк-поинты
-$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$pc: em(
+   $containerWidth
+); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
 $tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $mobile: em(767.98); // Телефоны L
 $mobileSmall: em(479.98); // Телефоны S
@@ -52,33 +53,33 @@ $mobileSmall: em(479.98); // Телефоны S
 @import "base/null";
 
 body {
-	// Скролл заблокирован
-	color: $mainColor;
-	background-color: $mainDark;
-	.lock & {
-		overflow: hidden;
-		touch-action: none;
-	}
-	// Сайт загружен
-	.loaded & {
-	}
+   // Скролл заблокирован
+   color: $mainColor;
+   background-color: $mainDark;
+   .lock & {
+      overflow: hidden;
+      touch-action: none;
+   }
+   // Сайт загружен
+   .loaded & {
+   }
 }
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	// Прижимаем footer
-	> main {
-		position: relative;
-		z-index: 2;
-		flex: 1 1 auto;
-	}
-	// Фикс для слайдеров
-	> * {
-		min-width: 0;
-	}
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   // Прижимаем footer
+   > main {
+      position: relative;
+      z-index: 2;
+      flex: 1 1 auto;
+   }
+   // Фикс для слайдеров
+   > * {
+      min-width: 0;
+   }
 }
 
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
@@ -90,47 +91,47 @@ body {
 Снипет (HTML): cnt
 */
 @if ($responsiveType==1) {
-	// Отзывчивая
-	[class*="__container"] {
-		position: relative;
-		z-index: 2;
-		@if ($maxWidthContainer>0) {
-			max-width: rem($maxWidthContainer);
-			box-sizing: content-box;
-			margin: 0 auto;
-		}
-		@if ($containerPadding>0) {
-			padding: 0 rem(math.div($containerPadding, 2));
-		}
-	}
-	[class*="__container_wide"] {
-		max-width: rem(1680);
-	}
+   // Отзывчивая
+   [class*="__container"] {
+      position: relative;
+      z-index: 2;
+      @if ($maxWidthContainer>0) {
+         max-width: rem($maxWidthContainer);
+         box-sizing: content-box;
+         margin: 0 auto;
+      }
+      @if ($containerPadding>0) {
+         padding: 0 rem(math.div($containerPadding, 2));
+      }
+   }
+   [class*="__container_wide"] {
+      max-width: rem(1680);
+   }
 } @else {
-	// По брейк-поинтам
-	[class*="__container"] {
-		margin: 0 auto;
-		@if ($maxWidthContainer>0) {
-			max-width: rem($maxWidthContainer);
-			box-sizing: content-box;
-		} @else {
-			@if ($containerPadding>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
-			}
-		}
-		@media (max-width: $pc) {
-			max-width: rem(970);
-		}
-		@media (max-width: $tablet) {
-			max-width: rem(750);
-		}
-		@media (max-width: $mobile) {
-			max-width: none;
-			@if ($containerPadding>0 and $maxWidthContainer>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
-			}
-		}
-	}
+   // По брейк-поинтам
+   [class*="__container"] {
+      margin: 0 auto;
+      @if ($maxWidthContainer>0) {
+         max-width: rem($maxWidthContainer);
+         box-sizing: content-box;
+      } @else {
+         @if ($containerPadding>0) {
+            padding: 0 rem(math.div($containerPadding, 2));
+         }
+      }
+      @media (max-width: $pc) {
+         max-width: rem(970);
+      }
+      @media (max-width: $tablet) {
+         max-width: rem(750);
+      }
+      @media (max-width: $mobile) {
+         max-width: none;
+         @if ($containerPadding>0 and $maxWidthContainer>0) {
+            padding: 0 rem(math.div($containerPadding, 2));
+         }
+      }
+   }
 }
 
 // Подключение базовых стилей, шаблонов (заготовок) и вспомагательных классов

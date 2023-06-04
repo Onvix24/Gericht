@@ -24,6 +24,10 @@ import "./libs/dynamic_adapt.js";
 /* Форматирование чисел */
 // import './libs/wNumb.min.js';
 
+
+// import datepicker from 'js-datepicker';
+// const picker = datepicker('', options);
+
 // Основные модули ========================================================================================================================================================================================================================================================
 import * as flsFunctions from "./files/functions.js";
 
@@ -78,16 +82,16 @@ flsFunctions.fullVHfix();
 import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы: добавление классов, работа с placeholder. */
-// flsForms.formFieldsInit();
+flsForms.formFieldsInit();
 
 /* Oтправка формы со встроенной валидацией полей. false - отключит валидацию */
-// flsForms.formSubmit(true);
+flsForms.formSubmit(true);
 
 /* (В работе) Работа с масками. */
 // flsForms.formMasks();
 
 /* Модуль формы "колличество" */
-// flsForms.formQuantity();
+// flsForms.formQuantity(); 
 
 /* Модуль формы "показать пароль" */
 // flsForms.formViewpass();
@@ -96,7 +100,7 @@ import * as flsForms from "./files/forms/forms.js";
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-//flsForms.formSelect();
+flsForms.formSelect();
 
 // Модуль работы с ползунком  ===================================================================================================================================================================================================================================================================================
 /*
@@ -156,6 +160,9 @@ flsScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру при прокрутке
 flsScroll.headerScroll();
+
+
+// flsScroll.bgParallax();
 
 // Функционал липкого блока
 // flsScroll.stickyBlock();
