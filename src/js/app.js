@@ -145,7 +145,7 @@ import "./files/sliders.js";
 Документация плагина: https://github.com/verlok/vanilla-lazyload
 Сниппет(HTML):
 */
-// import './files/scroll/lazyload.js';
+import './files/scroll/lazyload.js';
 
 // Функции работы скроллом ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import * as flsScroll from "./files/scroll/scroll.js";
@@ -153,7 +153,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // Наблюдатель за объектами c атрибутом data-watch
 // Документация по работе в шаблоне: js/libs/watcher.js
 // Сниппет(HTML):
-// flsScroll.scrollWatcher();
+flsScroll.scrollWatcher(true);
 
 // Плавная навигация по странице
 flsScroll.pageNavigation();
