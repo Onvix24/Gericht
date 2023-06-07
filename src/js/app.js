@@ -24,7 +24,6 @@ import "./libs/dynamic_adapt.js";
 /* Форматирование чисел */
 // import './libs/wNumb.min.js';
 
-
 // import datepicker from 'js-datepicker';
 // const picker = datepicker('', options);
 
@@ -91,7 +90,7 @@ flsForms.formSubmit(true);
 // flsForms.formMasks();
 
 /* Модуль формы "колличество" */
-// flsForms.formQuantity(); 
+// flsForms.formQuantity();
 
 /* Модуль формы "показать пароль" */
 // flsForms.formViewpass();
@@ -145,7 +144,7 @@ import "./files/sliders.js";
 Документация плагина: https://github.com/verlok/vanilla-lazyload
 Сниппет(HTML):
 */
-import './files/scroll/lazyload.js';
+import "./files/scroll/lazyload.js";
 
 // Функции работы скроллом ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import * as flsScroll from "./files/scroll/scroll.js";
@@ -153,14 +152,13 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // Наблюдатель за объектами c атрибутом data-watch
 // Документация по работе в шаблоне: js/libs/watcher.js
 // Сниппет(HTML):
-flsScroll.scrollWatcher(true);
+flsScroll.scrollWatcher(false);
 
 // Плавная навигация по странице
 flsScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру при прокрутке
 flsScroll.headerScroll();
-
 
 // flsScroll.bgParallax();
 
@@ -173,10 +171,9 @@ flsScroll.headerScroll();
 Документация плагина: https://www.lightgalleryjs.com/docs/
 Сниппет(HTML):
 */
-// import "./files/gallery.js";
-
+import { gallery } from "./files/gallery.js";
+gallery();
 // Прочее ========================================================================================================================================================================================================================================================
 /* Подключаем файлы со своим кодом */
 import "./files/script.js";
 //============================================================================================================================================================================================================================================
-
