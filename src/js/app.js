@@ -24,6 +24,9 @@ import "./libs/dynamic_adapt.js";
 /* Форматирование чисел */
 // import './libs/wNumb.min.js';
 
+// import datepicker from 'js-datepicker';
+// const picker = datepicker('', options);
+
 // Основные модули ========================================================================================================================================================================================================================================================
 import * as flsFunctions from "./files/functions.js";
 
@@ -78,10 +81,10 @@ flsFunctions.fullVHfix();
 import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы: добавление классов, работа с placeholder. */
-// flsForms.formFieldsInit();
+flsForms.formFieldsInit();
 
 /* Oтправка формы со встроенной валидацией полей. false - отключит валидацию */
-// flsForms.formSubmit(true);
+flsForms.formSubmit(true);
 
 /* (В работе) Работа с масками. */
 // flsForms.formMasks();
@@ -96,7 +99,7 @@ import * as flsForms from "./files/forms/forms.js";
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-//flsForms.formSelect();
+flsForms.formSelect();
 
 // Модуль работы с ползунком  ===================================================================================================================================================================================================================================================================================
 /*
@@ -141,7 +144,7 @@ import "./files/sliders.js";
 Документация плагина: https://github.com/verlok/vanilla-lazyload
 Сниппет(HTML):
 */
-// import './files/scroll/lazyload.js';
+import "./files/scroll/lazyload.js";
 
 // Функции работы скроллом ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import * as flsScroll from "./files/scroll/scroll.js";
@@ -149,13 +152,15 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // Наблюдатель за объектами c атрибутом data-watch
 // Документация по работе в шаблоне: js/libs/watcher.js
 // Сниппет(HTML):
-// flsScroll.scrollWatcher();
+flsScroll.scrollWatcher(false);
 
 // Плавная навигация по странице
 flsScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру при прокрутке
 flsScroll.headerScroll();
+
+// flsScroll.bgParallax();
 
 // Функционал липкого блока
 // flsScroll.stickyBlock();
@@ -166,10 +171,9 @@ flsScroll.headerScroll();
 Документация плагина: https://www.lightgalleryjs.com/docs/
 Сниппет(HTML):
 */
-// import "./files/gallery.js";
-
+import { gallery } from "./files/gallery.js";
+gallery();
 // Прочее ========================================================================================================================================================================================================================================================
 /* Подключаем файлы со своим кодом */
 import "./files/script.js";
 //============================================================================================================================================================================================================================================
-
